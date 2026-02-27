@@ -31,6 +31,15 @@ layout: default
             {{ post.title | escape }}
           </a>
         </h3>
+        {%- if post.tags and post.tags.size > 0 -%}
+          <p class="post-taxonomy">
+            标签：
+            {%- for tag in post.tags -%}
+              {%- assign tag_slug = tag | slugify -%}
+              <a class="post-tag" href="{{ '/tags/#' | append: tag_slug | relative_url }}">#{{ tag }}</a>{%- unless forloop.last -%} {%- endunless -%}
+            {%- endfor -%}
+          </p>
+        {%- endif -%}
         {%- if site.show_excerpts -%}
           {{ post.excerpt }}
         {%- endif -%}

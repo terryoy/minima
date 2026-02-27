@@ -2,6 +2,7 @@
 layout: post
 title: "这篇文章演示了文章内容样式"
 categories: junk
+tags: [demo, typography]
 author:
 - Bart Simpson
 - Nelson Mandela Muntz

@@ -24,6 +24,25 @@ layout: default
             {%- if forloop.last == false %}, {% endif -%}
         {% endfor %}
       {%- endif -%}</p>
+
+    {%- if page.tags and page.tags.size > 0 -%}
+      <p class="post-taxonomy">
+        标签：
+        {%- for tag in page.tags -%}
+          {%- assign tag_slug = tag | slugify -%}
+          <a class="post-tag" href="{{ '/tags/#' | append: tag_slug | relative_url }}">#{{ tag }}</a>{%- unless forloop.last -%} {%- endunless -%}
+        {%- endfor -%}
+      </p>
+    {%- endif -%}
+
+    {%- if page.categories and page.categories.size > 0 -%}
+      <p class="post-taxonomy">
+        分类：
+        {%- for category in page.categories -%}
+          <span class="post-category">{{ category }}</span>{%- unless forloop.last -%} {%- endunless -%}
+        {%- endfor -%}
+      </p>
+    {%- endif -%}
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">

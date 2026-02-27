@@ -1,5 +1,6 @@
 ---
 layout: post
+tags: [jekyll, quickstart]
 ---
 你会在 `_posts` 目录中找到这篇文章。现在就可以编辑它并重新构建站点来查看变化。构建站点有很多方式，最常见的是运行 `jekyll serve`，它会启动一个 Web 服务器，并在文件更新时自动重新生成站点。
 

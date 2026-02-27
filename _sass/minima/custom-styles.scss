@@ -1,8 +1,67 @@
 // Placeholder to allow defining custom styles that override everything else.
 // (Use `_sass/minima/custom-variables.scss` to override variable defaults)
 
-.post-tags {
-  font-size: .8em;
-  font-style: italic;
-  color: $brand-color-light;
+.post-taxonomy {
+  margin: 0.35rem 0 0;
+  font-size: 0.88rem;
+  color: $brand-color;
+}
+
+.post-tag,
+.post-category {
+  display: inline-block;
+  padding: 0.08rem 0.45rem;
+  border: 1px solid $brand-color-light;
+  border-radius: 999px;
+  line-height: 1.35;
+  text-decoration: none;
+  color: $brand-color-dark;
+  background: $background-color;
+}
+
+.post-tag:hover {
+  border-color: $link-base-color;
+  color: $link-base-color;
+}
+
+.tag-cloud {
+  margin: 0 0 $spacing-unit;
+  list-style: none;
+  padding: 0;
+}
+
+.tag-cloud > li {
+  display: inline-block;
+  margin: 0.2rem 0.35rem 0.2rem 0;
+}
+
+.tag-section {
+  margin-bottom: $spacing-unit;
+}
+
+.tag-posts,
+.archive-posts {
+  margin-left: 1.2rem;
+}
+
+.archive-month-index {
+  margin: 0 0 $spacing-unit;
+  list-style: none;
+  padding: 0;
+}
+
+.archive-month-index > li {
+  display: inline-block;
+  margin: 0.2rem 0.45rem 0.2rem 0;
+}
+
+.archive-month-title {
+  margin-top: $spacing-unit;
+}
+
+.archive-post-day {
+  display: inline-block;
+  min-width: 3.2rem;
+  color: $brand-color;
+  font-variant-numeric: tabular-nums;
 }
