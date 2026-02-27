@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Some articles are just so short that we have to make the footer stick"
+title: "有些文章短到必须让页脚吸底"
 categories: misc
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+这是一篇非常短的示例文章，用来演示当内容很少时页面布局的表现。即使正文只有一段文字，主题也应该保持结构完整、阅读舒适，并确保页脚停留在页面底部。

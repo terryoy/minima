@@ -1,9 +1,9 @@
 ---
 #
-# By default, content added below the "---" mark will appear in the home page
-# between the top bar and the list of recent posts.
-# To change the home page layout, edit the _layouts/home.html file.
-# See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+# 默认情况下，添加在 "---" 之后的内容会显示在首页中，
+# 位于顶部导航栏与最近文章列表之间。
+# 如需修改首页布局，请编辑 _layouts/home.html。
+# 参考：https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 #
 layout: home
 ---

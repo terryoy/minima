@@ -1,127 +1,120 @@
 # minima
 
-*Minima is a one-size-fits-all Jekyll theme for writers*. It's Jekyll's default (and first) theme. It's what you get when you run `jekyll new`.
+*Minima 是一款通用型 Jekyll 写作主题*。它是 Jekyll 的默认（也是第一个）主题。执行 `jekyll new` 时得到的就是它。
 
-***Disclaimer:** The information here may vary depending on the version you're using. Please refer to the `README.md` bundled
-within the theme-gem for information specific to your version or by pointing your browser to the Git tag corresponding to your
-version. e.g. https://github.com/jekyll/minima/blob/v2.5.0/README.md*  
-*Running `bundle show minima` will provide you with the local path to your current theme version.*
+***免责声明：** 此处信息会因你使用的版本不同而有所差异。请优先参考主题 gem 包中自带的 `README.md`，或在浏览器中打开与你版本对应的 Git 标签，例如：https://github.com/jekyll/minima/blob/v2.5.0/README.md*  
+*运行 `bundle show minima` 可查看你当前主题版本在本地的路径。*
 
-
-[Theme preview](https://jekyll.github.io/minima/)
+[主题预览](https://jekyll.github.io/minima/)
 
 ![minima theme preview](/screenshot.png)
 
-## Installation
+## 安装
 
-Add this line to your Jekyll site's Gemfile:
+在你的 Jekyll 站点 `Gemfile` 中添加：
 
 ```ruby
 gem "minima"
 ```
 
-And then execute:
+然后执行：
 
     $ bundle
 
 
-## Contents At-A-Glance
+## 内容速览
 
-Minima has been scaffolded by the `jekyll new-theme` command and therefore has all the necessary files and directories to have a new Jekyll site up and running with zero-configuration.
+Minima 由 `jekyll new-theme` 命令脚手架生成，因此具备零配置启动一个新 Jekyll 站点所需的全部文件和目录。
 
-### Layouts
+### 布局（Layouts）
 
-Refers to files within the `_layouts` directory, that define the markup for your theme.
+指 `_layouts` 目录下定义主题标记结构的文件。
 
-  - `default.html` &mdash; The base layout that lays the foundation for subsequent layouts. The derived layouts inject their contents into this file at the line that says ` {{ content }} ` and are linked to this file via [FrontMatter](https://jekyllrb.com/docs/frontmatter/) declaration `layout: default`.
-  - `home.html` &mdash; The layout for your landing-page / home-page / index-page. [[More Info.](#home-layout)]
-  - `page.html` &mdash; The layout for your documents that contain FrontMatter, but are not posts.
-  - `post.html` &mdash; The layout for your posts.
+  - `default.html` &mdash; 基础布局，为其他布局打底。派生布局通过 `{{ content }}` 注入内容，并通过 [FrontMatter](https://jekyllrb.com/docs/frontmatter/) 中 `layout: default` 关联到该布局。
+  - `home.html` &mdash; 落地页 / 首页 / 索引页布局。[[更多信息。](#home-layout)]
+  - `page.html` &mdash; 适用于包含 FrontMatter 但不是文章（post）的文档。
+  - `post.html` &mdash; 文章布局。
 
 #### Home Layout
 
-`home.html` is a flexible HTML layout for the site's landing-page / home-page / index-page. <br/>
+`home.html` 是一个灵活的 HTML 布局，用于站点落地页 / 首页 / 索引页。<br/>
 
-##### *Main Heading and Content-injection*
+##### *主标题与内容注入*
 
-From Minima v2.2 onwards, the *home* layout will inject all content from your `index.md` / `index.html` **before** the **`Posts`** heading. This will allow you to include non-posts related content to be published on the landing page under a dedicated heading. *We recommended that you title this section with a Heading2 (`##`)*.
+从 Minima v2.2 开始，*home* 布局会在 **`Posts`** 标题**之前**注入 `index.md` / `index.html` 的全部内容。这使你可以在首页专门区域发布与文章列表无关的内容。*建议将该区域标题设为二级标题（`##`）。*
 
-Usually the `site.title` itself would suffice as the implicit 'main-title' for a landing-page. But, if your landing-page would like a heading to be explicitly displayed, then simply define a `title` variable in the document's front matter and it will be rendered with an `<h1>` tag.
+通常 `site.title` 已可作为首页的隐式主标题。但如果你希望显式显示首页标题，只需在文档 front matter 中定义 `title` 变量，它会以 `<h1>` 渲染。
 
-##### *Post Listing*
+##### *文章列表*
 
-This section is optional from Minima v2.2 onwards.<br/>
-It will be automatically included only when your site contains one or more valid posts or drafts (if the site is configured to `show_drafts`).
+从 Minima v2.2 起，该部分为可选。<br/>
+仅当站点存在一篇或多篇有效文章（或启用 `show_drafts` 时存在草稿）时才会自动显示。
 
-The title for this section is `Posts` by default and rendered with an `<h2>` tag. You can customize this heading by defining a `list_title` variable in the document's front matter.
+该部分默认标题为 `Posts`，并以 `<h2>` 渲染。你可以在文档 front matter 中定义 `list_title` 来自定义该标题。
 
 
 ### Includes
 
-Refers to snippets of code within the `_includes` directory that can be inserted in multiple layouts (and another include-file as well) within the same theme-gem.
+指 `_includes` 目录中的代码片段，可在同一主题 gem 的多个布局（甚至其他 include 文件）中复用。
 
-  - `disqus_comments.html` &mdash; Code to markup disqus comment box.
-  - `footer.html` &mdash; Defines the site's footer section.
-  - `google-analytics.html` &mdash; Inserts Google Analytics module (active only in production environment).
-  - `head.html` &mdash; Code-block that defines the `<head></head>` in *default* layout.
-  - `header.html` &mdash; Defines the site's main header section. By default, pages with a defined `title` attribute will have links displayed here.
-  - `social.html` &mdash; Renders social-media icons based on the `minima:social_links` data in the config file.
+  - `disqus_comments.html` &mdash; Disqus 评论框标记代码。
+  - `footer.html` &mdash; 站点页脚区域定义。
+  - `google-analytics.html` &mdash; 插入 Google Analytics 模块（仅生产环境生效）。
+  - `head.html` &mdash; 在 *default* 布局中定义 `<head></head>` 的代码块。
+  - `header.html` &mdash; 站点主头部区域定义。默认会显示具有 `title` 属性页面的链接。
+  - `social.html` &mdash; 根据配置文件中的 `minima:social_links` 数据渲染社交媒体图标。
 
 
 ### Sass
 
-Refers to `.scss` files within the `_sass` directory that define the theme's styles.
+指 `_sass` 目录中定义主题样式的 `.scss` 文件。
 
-  - `minima-classic.scss` &mdash; The core file imported by preprocessed `css/style.scss`, it defines the variable defaults for
-    the "classic" skin of the theme.
-  - `minima/initialize.scss` &mdash; A component that defines the theme's *skin-agnostic* variable defaults and sass partials.
-  - `minima/custom-variables.scss` &mdash; A hook that allows overriding variable defaults and mixins. (*Note: Cannot override styles*)
-  - `minima/custom-styles.scss` &mdash; A hook that allows overriding styles. (*Note: Cannot override variables*)
-  - `minima/_base.scss` &mdash; Sass partial for resets and defines base styles for various HTML elements.
-  - `minima/_layout.scss` &mdash; Sass partial that defines the visual style for various layouts.
+  - `minima-classic.scss` &mdash; 被预处理文件 `css/style.scss` 导入的核心文件，定义主题“classic”皮肤的变量默认值。
+  - `minima/initialize.scss` &mdash; 定义主题与皮肤无关（*skin-agnostic*）的变量默认值和 sass partial。
+  - `minima/custom-variables.scss` &mdash; 用于覆盖变量默认值和 mixin 的钩子。(*注意：不能覆盖样式*)
+  - `minima/custom-styles.scss` &mdash; 用于覆盖样式的钩子。(*注意：不能覆盖变量*)
+  - `minima/_base.scss` &mdash; reset 与基础 HTML 元素样式定义的 Sass partial。
+  - `minima/_layout.scss` &mdash; 各种布局视觉样式定义的 Sass partial。
 
-Refer the [skins](#skins) section for more details.
+更多信息见 [skins](#skins) 章节。
 
 
 ### Assets
 
-Refers to various asset files within the `assets` directory.
-Contains the `css/style.scss` that imports sass files from within the `_sass` directory. This `css/style.scss` is what gets processed into the theme's main stylesheet `main.css` called by `_layouts/default.html` via `_includes/head.html`.
+指 `assets` 目录下的各类资源文件。
+其中包含 `css/style.scss`，它会导入 `_sass` 目录中的 sass 文件。这个 `css/style.scss` 会被处理为主题主样式表 `main.css`，并由 `_layouts/default.html` 通过 `_includes/head.html` 引用。
 
-This directory can include sub-directories to manage assets of similar type (`img`, `fonts`, `svg`), and will be copied over as is, to the final transformed site directory.
-
-
-### Plugins
-
-Minima comes with [`jekyll-seo-tag`](https://github.com/jekyll/jekyll-seo-tag) plugin preinstalled to make sure your website gets the most useful meta tags. See [usage](https://github.com/jekyll/jekyll-seo-tag#usage) to know how to set it up.
+该目录可包含用于管理同类资源的子目录（如 `img`、`fonts`、`svg`），并会原样复制到最终生成的网站目录。
 
 
-## Usage
+### 插件（Plugins）
 
-Have the following line in your config file:
+Minima 预装了 [`jekyll-seo-tag`](https://github.com/jekyll/jekyll-seo-tag) 插件，以确保你的网站拥有更有用的元标签。请参考其 [usage](https://github.com/jekyll/jekyll-seo-tag#usage) 了解配置方法。
+
+
+## 使用
+
+在配置文件中包含以下配置：
 
 ```yaml
 theme: minima
 ```
 
 
-### Customizing templates
+### 自定义模板
 
-To override the default structure and style of minima, simply create the concerned directory at the root of your site, copy the file you wish to customize to that directory, and then edit the file.
-e.g., to override the [`_includes/head.html `](_includes/head.html) file to specify a custom style path, create an `_includes` directory, copy `_includes/head.html` from minima gem folder to `<yoursite>/_includes` and start editing that file.
+若要覆盖 minima 默认结构与样式，只需在站点根目录创建对应目录，将你要自定义的文件复制到该目录后进行编辑。
+例如，要覆盖 [`_includes/head.html `](_includes/head.html) 以指定自定义样式路径，可创建 `_includes` 目录，将 minima gem 中的 `_includes/head.html` 复制到 `<yoursite>/_includes`，然后开始修改。
 
-The site's default CSS has now moved to a new place within the gem itself, [`assets/css/style.scss`](assets/css/style.scss).
+站点默认 CSS 现在已移动到 gem 内部新位置：[`assets/css/style.scss`](assets/css/style.scss)。
 
-In Minima 3.0, if you only need to customize the colors of the theme, refer to the subsequent section on skins. To have your
-*CSS overrides* in sync with upstream changes released in future versions, you can collect all your overrides for the Sass
-variables and mixins inside a sass file placed at `_sass/minima/custom-variables.scss` and all other overrides inside a sass file
-placed at path `_sass/minima/custom.scss`.
+在 Minima 3.0 中，如果你只需自定义主题颜色，请参考下一节 skins。为了让你的 *CSS 覆盖* 与未来上游版本改动保持同步，你可以把 Sass 变量和 mixin 的覆盖集中放在 `_sass/minima/custom-variables.scss`，其他样式覆盖放在 `_sass/minima/custom.scss`。
 
-You need not maintain entire partial(s) at the site's source just to override a few styles.
+无需为了覆盖少量样式而维护整个 partial 文件。
 
 #### Skins
 
-Minima 3.0 supports defining and switching between multiple color-palettes (or *skins*).
+Minima 3.0 支持定义并切换多套配色（或称 *skins*）。
 
 ```
 .
@@ -131,38 +124,34 @@ Minima 3.0 supports defining and switching between multiple color-palettes (or *
 ```
 
 
-A skin is a Sass file named in the format `minima-*` and is the core file imported by the `assets/css/style.scss`. It defines the
-variable defaults related to the "color" aspect of the theme and imports two components:
+皮肤文件是一个命名为 `minima-*` 的 Sass 文件，由 `assets/css/style.scss` 导入。它定义主题与“颜色”相关的变量默认值，并导入两个组件：
 
-  - `minima/initialize.scss` &mdash; Defines the theme's *skin-agnostic* variable defaults and sass partials for styles.
-  - `minima/custom-styles.scss` &mdash; A hook for overriding the predefined styles. (*Note: Cannot override variables*)
+  - `minima/initialize.scss` &mdash; 定义主题与皮肤无关的变量默认值和样式 partial。
+  - `minima/custom-styles.scss` &mdash; 用于覆盖预定义样式的钩子。(*注意：不能覆盖变量*)
 
-A skin also embeds the Sass rules related to syntax-highlighting since that is primarily related to color and has to be adjusted
-in harmony with the current skin.
+皮肤文件也会内嵌语法高亮相关 Sass 规则，因为这部分主要与颜色相关，需要与当前皮肤协调。
 
-The default color palette for Minima is defined within `_sass/minima-classic.scss`. To switch to another available skin, simply
-declare it in the site's config file. For example, to activate `_sass/minima-sunrise.scss` as the skin, the setting would be:
+Minima 的默认配色定义在 `_sass/minima-classic.scss`。如需切换到其他可用皮肤，只需在站点配置文件中声明。例如，启用 `_sass/minima-sunrise.scss` 的配置如下：
 
 ```yaml
 minima:
   skin: sunrise
 ```
 
-As part of the migration to support skins, some existing Sass variables have been retired and some **have been redefined** as
-summarized in the following table:
+为支持 skins 迁移，部分旧 Sass 变量已弃用，部分变量被**重新定义**，如下表所示：
 
 Minima 2.0      | Minima 3.0
 --------------- | ----------
 `$brand-color`  | `$link-base-color`
 `$grey-*`       | `$brand-*`
-`$orange-color` | *has been removed*
+`$orange-color` | *已移除*
 
 
-### Customize navigation links
+### 自定义导航链接
 
-This allows you to set which pages you want to appear in the navigation area and configure order of the links.
+可设置你希望显示在导航区域的页面，并配置链接顺序。
 
-For instance, to only link to the `about` and the `portfolio` page, add the following to your `_config.yml`:
+例如，只链接到 `about` 与 `portfolio` 页面时，在 `_config.yml` 中添加：
 
 ```yaml
 header_pages:
@@ -171,47 +160,46 @@ header_pages:
 ```
 
 
-### Change default date format
+### 修改默认日期格式
 
-You can change the default date format by specifying `site.minima.date_format`
-in `_config.yml`.
+你可以在 `_config.yml` 中通过 `site.minima.date_format` 修改默认日期格式。
 
 ```
-# Minima date format
-# refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
+# Minima 日期格式
+# 如需自定义，可参考 http://shopify.github.io/liquid/filters/date/
 minima:
   date_format: "%b %-d, %Y"
 ```
 
 
-### Add your favicons
+### 添加你自己的 favicon
 
-1. Head over to [https://realfavicongenerator.net/](https://realfavicongenerator.net/) to add your own favicons.
-2. [Customize](#customization) default `_includes/favicons.html` in your source directory and insert the given code snippet.
+1. 访问 [https://realfavicongenerator.net/](https://realfavicongenerator.net/) 生成你的 favicon。
+2. 在源码目录中 [Customize](#customization) 默认 `_includes/favicons.html`，并插入生成的代码片段。
 
 
-### Enabling comments (via Disqus)
+### 启用评论（Disqus）
 
-Optionally, if you have a Disqus account, you can tell Jekyll to use it to show a comments section below each post.
+可选地，如果你有 Disqus 账号，可以让 Jekyll 在每篇文章下显示评论区。
 
-To enable it, add the following lines to your Jekyll site:
+启用方式：在 Jekyll 站点配置中添加：
 
 ```yaml
   disqus:
     shortname: my_disqus_shortname
 ```
 
-You can find out more about Disqus' shortnames [here](https://help.disqus.com/installation/whats-a-shortname).
+你可以在 [这里](https://help.disqus.com/installation/whats-a-shortname) 了解更多 Disqus shortname。
 
-Comments are enabled by default and will only appear in production, i.e., `JEKYLL_ENV=production`
+评论默认启用，但仅在生产环境显示，即 `JEKYLL_ENV=production`。
 
-If you don't want to display comments for a particular post you can disable them by adding `comments: false` to that post's YAML Front Matter.
+如果你不希望某篇文章显示评论，可在该文章 YAML Front Matter 中添加 `comments: false`。
 
-:warning: `url`, e.g. `https://example.com`, must be set in you config file for Disqus to work.
+:warning: 要让 Disqus 生效，配置文件中必须设置 `url`（如 `https://example.com`）。
 
-### Author Metadata
+### 作者元数据
 
-From `Minima-3.0` onwards, `site.author` is expected to be a mapping of attributes instead of a simple scalar value:
+从 `Minima-3.0` 开始，`site.author` 期望是属性映射（mapping），而不是简单标量值：
 
 ```yaml
 author:
@@ -219,7 +207,7 @@ author:
   email: "john.smith@foobar.com"
 ```
 
-To migrate existing metadata, update your config file and any reference to the object in your layouts and includes as summarized below:
+迁移已有元数据时，请更新配置文件及布局/include 中对该对象的引用，示例如下：
 
 Minima 2.x    | Minima 3.0
 ------------- | -------------------
@@ -227,10 +215,10 @@ Minima 2.x    | Minima 3.0
 `site.email`  | `site.author.email`
 
 
-### Social networks
+### 社交网络
 
-You can add links to the accounts you have on other sites, with respective icon, by adding one or more of the following options in your config.
-From `Minima-3.0` onwards, the usernames are to be nested under `minima.social_links`, with the keys being simply the social-network's name:
+你可以在配置中添加以下一个或多个选项，为其他站点账号生成对应图标链接。
+从 `Minima-3.0` 开始，用户名需放在 `minima.social_links` 下，键名直接使用社交网络名称：
 
 ```yaml
 minima:
@@ -267,35 +255,35 @@ minima:
 ```
 
 
-### Enabling Google Analytics
+### 启用 Google Analytics
 
-To enable Google Analytics, add the following lines to your Jekyll site:
+在 Jekyll 站点配置中添加：
 
 ```yaml
   google_analytics: UA-NNNNNNNN-N
 ```
 
-Google Analytics will only appear in production, i.e., `JEKYLL_ENV=production`
+Google Analytics 仅会在生产环境显示，即 `JEKYLL_ENV=production`。
 
-### Enabling Excerpts on the Home Page
+### 在首页启用摘要（Excerpts）
 
-To display post-excerpts on the Home Page, simply add the following to your `_config.yml`:
+若要在首页显示文章摘要，在 `_config.yml` 中添加：
 
 ```yaml
 show_excerpts: true
 ```
 
 
-## Contributing
+## 参与贡献
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/jekyll/minima. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+欢迎在 GitHub 提交 Bug 报告和 Pull Request：https://github.com/jekyll/minima。该项目致力于提供安全、友好的协作环境，贡献者应遵守 [Contributor Covenant](http://contributor-covenant.org) 行为准则。
 
-## Development
+## 开发
 
-To set up your environment to develop this theme, run `script/bootstrap`.
+要搭建此主题的开发环境，请运行 `script/bootstrap`。
 
-To test your theme, run `script/server` (or `bundle exec jekyll serve`) and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme and the contents. As you make modifications, your site will regenerate and you should see the changes in the browser after a refresh.
+要测试主题，请运行 `script/server`（或 `bundle exec jekyll serve`），并在浏览器打开 `http://localhost:4000`。这会启动使用当前主题与内容的 Jekyll 服务。你修改文件后站点会重新生成，刷新浏览器即可看到变化。
 
-## License
+## 许可证
 
-The theme is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+该主题以开源方式发布，遵循 [MIT License](http://opensource.org/licenses/MIT) 条款。

@@ -1,224 +1,224 @@
 ## HEAD
 
-### Documentation
+### 文档
 
-  * Forward port v2.5.1 release (#399)
-  * Docs: remove Google+ (#373)
-  * Update README section on adding favicons to site (#438)
+  * 向前移植 v2.5.1 发布内容（#399）
+  * 文档：移除 Google+（#373）
+  * 更新 README 中“向站点添加 favicon”章节（#438）
 
-### Minor Enhancements
+### 小改进
 
-  * Add Keybase to social links (#400)
-  * Solarized skins (#404)
-  * Add a placeholder of favicons (#433)
-  * fix: make page.list_title optional (#303)
-  * Add stackoverflow to social media list (#443)
-  * Add social support for dev.to (#410)
-  * Add GitLab to social (#352)
-  * Support mutiple authors on post layout (#348)
-  * Re-implement site footer markup and styles (#448)
-  * Support pagination through posts in home layout (#450)
-  * Show the last modified date of posts (#432)
+  * 社交链接新增 Keybase（#400）
+  * 新增 Solarized 皮肤（#404）
+  * 添加 favicon 占位文件（#433）
+  * 修复：让 page.list_title 变为可选（#303）
+  * 社交媒体列表新增 stackoverflow（#443）
+  * 为 dev.to 增加社交支持（#410）
+  * 社交支持新增 GitLab（#352）
+  * post 布局支持多个作者（#348）
+  * 重新实现站点页脚标记与样式（#448）
+  * home 布局支持文章分页（#450）
+  * 显示文章最后修改日期（#432）
 
-### Major Enhancements
+### 重大增强
 
-  * Allow skins to be defined and customized easily (#336)
-  * Drop support for scalar &#39;author&#39; configuration (#384)
+  * 允许更轻松地定义与自定义皮肤（#336）
+  * 移除对标量 `author` 配置的支持（#384）
 
-### Bug Fixes
+### Bug 修复
 
-  * Add missing rel=me attributes to social links (#386)
-  * Set the border radius of highlight (#426)
-  * Removed unnecessary whitespace-controls (#390)
-  * fix: overflow auto for tables (#296)
-  *  Add `overflow-wrap: break-word` to body tag (#321)
-  * Use &#34;rem&#34; unit in relative-font-size mixin (#436)
-  * Assign static value to variable outside forloop (#437)
-  * Add font-size styles for elements h5 and h6 (#441)
-  * Stop prefixing CSS calc with `-webkit-` (#445)
-  * Improve readability of post titles with diacritics (#449)
-  * Fix a bug of incorrect parsing of page.modified_date (#455)
+  * 为社交链接补充缺失的 rel=me 属性（#386）
+  * 设置高亮块圆角（#426）
+  * 移除不必要的空白控制（#390）
+  * 修复：表格启用 overflow auto（#296）
+  * 给 body 添加 `overflow-wrap: break-word`（#321）
+  * 在 relative-font-size mixin 中使用 `rem` 单位（#436）
+  * 在 forloop 外为变量赋静态值（#437）
+  * 为 h5 和 h6 元素添加 font-size 样式（#441）
+  * 停止为 CSS calc 添加 `-webkit-` 前缀（#445）
+  * 提升带重音符号文章标题的可读性（#449）
+  * 修复 page.modified_date 解析错误问题（#455）
 
-### Development Fixes
+### 开发修复
 
-  * Ignore .jekyll-cache (#439)
+  * 忽略 .jekyll-cache（#439）
 
 ## 2.5.1
 
-### Minor Enhancements
+### 小改进
 
-  * Allow use and testing with Jekyll 4.x (#398)
+  * 允许在 Jekyll 4.x 下使用和测试（#398）
 
-### Bug Fixes
+### Bug 修复
 
-  * Footer overlapping issue (Support Microsoft Explorer 11) (#248)
-  * Update multiline config comment. (#346)
+  * 页脚重叠问题（支持 Microsoft Explorer 11）（#248）
+  * 更新多行配置注释（#346）
 
-### Development Fixes
+### 开发修复
 
-  * remove deprecated `sudo: false` in .travis.yml (#347)
+  * 在 .travis.yml 中移除已弃用的 `sudo: false`（#347）
 
 ## 2.5.0
 
-### Bug Fixes
+### Bug 修复
 
-  * Add `jekyll-feed` plugin in config (#228)
+  * 在配置中添加 `jekyll-feed` 插件（#228）
 
-### Minor Enhancements
+### 小改进
 
-  * Stick footer for short posts (#223)
-  * Consolidate trigger SVG paths (#148)
+  * 为短文章实现页脚吸底（#223）
+  * 合并触发器 SVG 路径（#148）
 
 ## 2.4.1
 
-### Bug Fixes
+### Bug 修复
 
-  * Reintroduce removed social includes for backwards compatibility (#217)
+  * 重新引入被移除的社交 include 以保持向后兼容（#217）
 
 ## 2.4.0
 
-### Minor Enhancements
+### 小改进
 
-  * Add better system fonts (#205)
-  * Remove whitespace due to Liquid tags in generated HTML (#202)
-  * Adding Mastodon to the social networks (#198)
+  * 添加更好的系统字体（#205）
+  * 移除生成 HTML 中因 Liquid 标签导致的空白（#202）
+  * 社交网络新增 Mastodon（#198）
 
-### Bug Fixes
+### Bug 修复
 
-  * social icons should resolve baseurl properly (#201)
-  * fix: styling main element in IE 11 (#199)
+  * 社交图标应正确解析 baseurl（#201）
+  * 修复：IE 11 中 main 元素样式（#199）
 
-### Documentation
+### 文档
 
-  * Improve thw wording in index.md (#175)
-  * Update config description comment (#203)
+  * 改进 index.md 的措辞（#175）
+  * 更新配置说明注释（#203）
 
 ## 2.3.0
 
-  * Add option to show excerpts on the homepage (#90)
-  * Handle RSS feed with jekyll-feed (#183)
-  * Test build with Ruby 2.4 on CI (#184)
-  * Document how to customize navigation links (#192)
+  * 添加首页显示摘要选项（#90）
+  * 使用 jekyll-feed 处理 RSS（#183）
+  * 在 CI 中用 Ruby 2.4 测试构建（#184）
+  * 记录如何自定义导航链接（#192）
 
 ## 2.2.1
 
-  * Revert social_sites hash for retrocompatibility (#190)
+  * 回退 social_sites 哈希以保持兼容（#190）
 
 ## 2.2.0
 
-### Minor Enhancements
+### 小改进
 
-  * handling content outside of posts (#88)
-  * Add default table styles (#144)
-  * Add `jekyll-seo-tag` dependency (#139)
-  * Add Microformats markup (#160)
-  * Add more social links (#141)
+  * 处理文章之外的内容（#88）
+  * 添加默认表格样式（#144）
+  * 添加 `jekyll-seo-tag` 依赖（#139）
+  * 添加 Microformats 标记（#160）
+  * 增加更多社交链接（#141）
 
-### Documentation
+### 文档
 
-  * Docs: clarification about page title (#142)
+  * 文档：澄清页面标题说明（#142）
 
 ## 2.1.1 / 2017-04-13
 
-### Minor Enhancements
+### 小改进
 
-  * Close #55: Improve mobile user experience (#62)
-  * Remove incomplete status from spec summary (#63)
-  * Use date_format if set in configuration (#70)
-  * Corrected misspelled word (#72)
-  * Scale headings relative to base-font-size (#78)
-  * Remove 2.0 post-install message (#82)
-  * Fixes #115 - Only include the nav tag if there are pages to be displayed in the menu (#116)
-  * Fixes #80, #106. Make the hamburger work with pure CSS. (#111)
-  * add `header_pages` config to link only specific files in header (#52)
-  * More easily customizable CSS (#117)
-  * Use relative size for fonts and line-height (#103)
-  * Add 404 page from jekyll `master` (#121)
+  * 关闭 #55：改善移动端用户体验（#62）
+  * 从规范摘要中移除“不完整”状态（#63）
+  * 若配置中设置，则使用 date_format（#70）
+  * 修正拼写错误（#72）
+  * 按 base-font-size 相对缩放标题（#78）
+  * 移除 2.0 安装后提示信息（#82）
+  * 修复 #115：仅在菜单存在页面时包含 nav 标签（#116）
+  * 修复 #80、#106：仅用纯 CSS 让汉堡菜单可用（#111）
+  * 添加 `header_pages` 配置，仅在头部链接指定文件（#52）
+  * 让 CSS 更易自定义（#117）
+  * 使用相对字号与行高（#103）
+  * 从 jekyll `master` 添加 404 页面（#121）
 
-### Development Fixes
+### 开发修复
 
-  * Remove duplicate .sass-cache  (#71)
-  * Demo minima on GitHub Pages (#76)
-  * Remove the Rakefile (#118)
+  * 移除重复的 .sass-cache（#71）
+  * 在 GitHub Pages 演示 minima（#76）
+  * 移除 Rakefile（#118）
 
-### Documentation
+### 文档
 
-  * Update README with theme content description (#91)
-  * Update default local URL (#120)
+  * 在 README 更新主题内容说明（#91）
+  * 更新默认本地 URL（#120）
 
 ## 2.1.0 / 2016-11-15
 
-### Minor Enhancements
+### 小改进
 
-  * Update gemspec to require at least Jekyll 3.3 (#59)
-  * Use `absolute_url` filter for disqus (#66)
-  * replace `example/index.html` with `example/index.md` (#58)
+  * 更新 gemspec，要求至少 Jekyll 3.3（#59）
+  * Disqus 使用 `absolute_url` 过滤器（#66）
+  * 将 `example/index.html` 替换为 `example/index.md`（#58）
 
-### Development Fixes
+### 开发修复
 
-  * Example should require Jekyll 3.3 (#61)
+  * 示例应要求 Jekyll 3.3（#61）
 
 ## 2.0.0 / 2016-10-06
 
-### Minor Enhancements
+### 小改进
 
-  * priority to site.url when site.github.url is available (#46)
-  * Move contents of the index.html page to the 'home' layout (#48)
-  * Use  new `absolute_url` and `relative_url` filters in minima (#57)
+  * 当 site.github.url 可用时，优先使用 site.url（#46）
+  * 将 index.html 页面内容移入 `home` 布局（#48）
+  * 在 minima 中使用新的 `absolute_url` 与 `relative_url` 过滤器（#57）
 
-### Development Fixes
+### 开发修复
 
-  * Use standardized tab size of 2 spaces (#44)
+  * 使用标准 2 空格缩进（#44）
 
-### Major Enhancements
+### 重大增强
 
-  * move `css/` directory from jekyll into `assets/` (#43)
+  * 将 `css/` 目录从 jekyll 移动到 `assets/`（#43）
 
-### Bug Fixes
+### Bug 修复
 
-  * Fix html proofer errors (#49)
-  * Update gem regex to include new `assets` directory (#54)
+  * 修复 html proofer 错误（#49）
+  * 更新 gem 正则以包含新 `assets` 目录（#54）
 
 ## 1.2.0 / 2016-09-12
 
-### Minor Enhancements
+### 小改进
 
-  * Look to site.url when available (#35)
+  * site.url 可用时优先使用它（#35）
 
-### Documentation
+### 文档
 
-  * Move instruction for CSS in install section (#37)
+  * 将 CSS 说明移至安装章节（#37）
 
 ## 1.1.0 / 2016-09-07
 
-### Major Enhancements
+### 重大增强
 
-  * Add support to Disqus (#21)
-  * Google analytics support (#26)
-  * Look for `site.github.url` if it exists (#25)
+  * 增加 Disqus 支持（#21）
+  * 支持 Google Analytics（#26）
+  * 如果存在则使用 `site.github.url`（#25）
 
-### Minor Enhancements
+### 小改进
 
-  * Fixed Flash Of Unstyled SVG (#12)
-  * Added "author" in footer instead of double title (#22)
+  * 修复 SVG 无样式闪烁（FOUS）（#12）
+  * 在页脚添加“author”，而不是重复标题（#22）
 
-### Documentation
+### 文档
 
-  * Document how to link to the theme styles (#18)
-  * Update Example to resemble Default site (#24)
+  * 记录如何链接到主题样式（#18）
+  * 更新示例以更接近默认站点（#24）
 
-### Development Enhancements
+### 开发增强
 
-  * Use upstream gemspec file matcher (#9)
-  * Fix gemspec regex (#31)
-  * Add Travis and a basic smoke test (#33)
+  * 使用上游 gemspec 文件匹配器（#9）
+  * 修复 gemspec 正则（#31）
+  * 添加 Travis 与基础冒烟测试（#33）
 
 ## 1.0.1 / 2016-07-28
 
-  * include `_layouts`, `_includes`, and `_sass` dir in gem (#6)
+  * 在 gem 中包含 `_layouts`、`_includes` 与 `_sass` 目录（#6）
 
 ## 1.0.0 / 2016-07-27
 
-  * default layout: html `lang` attribute should allow user customization (#3)
-  * Use `normalize_whitespace` filter for meta description (#4)
-  * Fix repo's URL in contributing (#5)
+  * 默认布局：html `lang` 属性应允许用户自定义（#3）
+  * 为 meta description 使用 `normalize_whitespace` 过滤器（#4）
+  * 修复 contributing 中仓库 URL（#5）

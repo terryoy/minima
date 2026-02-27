@@ -2,11 +2,11 @@
 layout: post
 ---
 
-Eos eu docendi tractatos sapientem, brute option menandri in vix, quando vivendo accommodare te ius. Nec melius fastidii constituam id, viderer theophrastus ad sit, hinc semper periculis cum id. Noluisse postulant assentior est in, no choro sadipscing repudiandae vix. Vis in euismod delenit dignissim. Ex quod nostrum sit, suas decore animal id ius, nobis solet detracto quo te.
+这是一篇用于占位的示例内容。它模拟了普通博客文章的段落结构，方便你在本地预览主题排版效果，包括行高、段距与阅读节奏。
 
 {% comment %}
-Might you have an include in your theme? Why not try it here!
+你的主题里可能有一个 include 片段？不妨在这里试试！
 {% include my-themes-great-include.html %}
 {% endcomment %}
 
-No laudem altera adolescens has, volumus lucilius eum no. Eam ei nulla audiam efficiantur. Suas affert per no, ei tale nibh sea. Sea ne magna harum, in denique scriptorem sea, cetero alienum tibique ei eos. Labores persequeris referrentur eos ei.
+继续补充一些文本，让页面内容更接近真实文章。你可以把这里替换成自己的笔记、教程或更新日志，以验证主题在不同长度文章下的展示效果。
