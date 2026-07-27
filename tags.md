@@ -2,13 +2,15 @@
 layout: page
 title: 标签
 permalink: /tags/
+description: 按标签浏览博客文章
 ---
 
 {%- assign date_format = site.minima.date_format | default: "%Y-%m-%d" -%}
-{%- assign sorted_tags = site.tags | sort -%}
+{%- assign sorted_tags = site.tags | sort_natural -%}
+{%- assign total_posts = site.posts | size -%}
 
 {%- if sorted_tags.size > 0 -%}
-<p>共 {{ sorted_tags | size }} 个标签。</p>
+<p>共 {{ sorted_tags | size }} 个标签，{{ total_posts }} 篇文章。</p>
 
 <ul class="tag-cloud">
 {%- for tag in sorted_tags -%}
